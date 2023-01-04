@@ -1,157 +1,222 @@
-:root{
-    --font-family_main: 'Inter';
-    --color_blue: #0A3871; 
-    --color_white: #fff;
-    --color_background: #F3F5FC;
+:root {
+  --font-family_main: "Inter";
+  --color_blue: #0a3871;
+  --color_white: #fff;
+  --color_background: #f3f5fc;
 }
 
-*, html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-family_main);
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family_main);
 }
 
-body{
-    background-color: var(--color_background);
+body {
+  background-color: var(--color_background);
 }
 
-.container{
-    margin: 0px 16px 24px;
+.container {
+  margin: 0px 16px 24px;
 }
 
-header{
-    margin: 24px 16px 0px;
+header {
+  margin: 24px 16px 0px;
 }
 
-.input{
-    margin-top: 76px;
-    border: none;
-    font-size: 32px;
-    line-height: 48px;
-    width: 100%;
-    color: var(--color_blue);
-    outline: none;
-    resize: none;
-    background-color: transparent;
+.input {
+  margin-top: 76px;
+  border: none;
+  font-size: 32px;
+  line-height: 48px;
+  width: 100%;
+  color: var(--color_blue);
+  outline: none;
+  resize: none;
+  background-color: transparent;
 }
 
-.input::placeholder{
-    font-size: 32px;
-    line-height: 48px;
-    color: var(--color_blue);
+.input::placeholder {
+  font-size: 32px;
+  line-height: 48px;
+  color: var(--color_blue);
 }
 
-.info{
-    display: flex; 
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info p {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 24px;
+  font-size: 16px;
+  line-height: 19.36px;
+  border-radius: 24px;
+  margin-top: 16px;
+}
+
+.btn_blue {
+  background-color: var(--color_blue);
+  color: var(--color_white);
+  border: none;
+}
+
+.btn_transparent {
+  background-color: transparent;
+  color: var(--color_blue);
+  border: 1px solid var(--color_blue);
+}
+
+.output-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.output-criptografy {
+  margin: 40px 8px;
+}
+
+.box_message,
+.cripto_message {
+  background-color: var(--color_white);
+  border-radius: 24px;
+
+  text-align: center;
+  padding: 32px;
+}
+
+.box_message .message-group > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.box_message .message-group > p:nth-child(3) {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.message-group figure {
+  display: none;
+}
+
+.box_message .output {
+  font-size: 24px;
+  text-align: left;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0px 40px 24px;
+  }
+
+  header {
+    margin: 24px 40px 0px;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button-group .btn {
+    width: 48%;
+  }
+
+  .output-criptografy {
+    margin: 64px 8px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+
+  footer svg {
+    order: -1;
+    margin-bottom: 6px;
+  }
 }
 
-.info p{
-    margin-left: 5px;
-    font-size: 12px;
-}
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
 
-.button-group{
+  body > div {
     display: flex;
-    flex-direction: column;
-}
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 
-.btn{
-    padding: 24px;
-    font-size: 16px;
-    line-height: 19.36px;
-    border-radius: 24px;
-    margin-top: 16px;
-}
+  .input-criptografy {
+    padding-left: 160px;
+  }
 
-.btn_blue{
-    background-color: var(--color_blue);
-    color: var(--color_white);
-    border: none;
-}
-
-.btn_transparent{
-    background-color: transparent;
-    color: var(--color_blue);
-    border: 1px solid var(--color_blue);
-}
-
-.output-group{
+  .output-criptografy {
+    margin: 24px 24px 0 0;
+    width: 30%;
     display: flex;
-    flex-direction: column;
-}
-
-.output-criptografy{ 
-    margin: 40px 8px;
-}
-
-.box_message, .cripto_message{
+    align-items: center;
     background-color: var(--color_white);
     border-radius: 24px;
-    
-    text-align: center;
-    padding: 32px;
-}
+  }
 
-.box_message .message-group > p:nth-child(2){
-    font-size: 24px;
-}
+  .output-criptografy img {
+    width: 100%;
+  }
 
-.box_message .message-group > p:nth-child(3){
-    font-size: 16px;
-    margin-top: 16px;
-}
-
-.box_message .output{
-    font-size: 24px;
-    text-align: left;
-    border: none;
-    outline: none;
-    resize: none;
-}
-
-.hide{
-    display: none;
-}
-
-footer{
-    padding-bottom: 8px;
+  .box_message {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+    flex-direction: column;
+    justify-content: center;
+  }
+  .output-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-@media (min-width: 768px){
-    .container{
-        margin: 0px 40px 24px;
-    }
+  .output{
+    height: 100%;
+  }
 
-    header{
-        margin: 24px 40px 0px;
-    }
+  .message-group figure {
+    display: unset;
+  }
 
-    .button-group{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .button-group .btn{
-        width: 48%;
-    }
-
-    .output-criptografy{ 
-        margin: 64px 8px;
-    }
-
-    footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer svg{
-        order: -1;
-        margin-bottom: 6px;
-    }
+  footer {
+    padding: 24px 0 16px;
+  }
 }
